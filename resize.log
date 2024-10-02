@@ -1,0 +1,55 @@
+### resize
+Checking that no-one is using this disk right now ... OK
+
+Disk /dev/vda: 15 GiB, 16106127360 bytes, 31457280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xb98171fc
+
+Old situation:
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/vda1  *     2048 20971519 20969472  10G 83 Linux
+
+/dev/vda1: 
+New situation:
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/vda1  *     2048 31457279 31455232  15G 83 Linux
+
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+/dev/vda1: recovering journal
+Clearing orphaned inode 133006 (uid=114, gid=119, mode=0100600, size=0)
+Clearing orphaned inode 132961 (uid=114, gid=119, mode=0100600, size=0)
+Clearing orphaned inode 132856 (uid=114, gid=119, mode=0100600, size=0)
+Clearing orphaned inode 132812 (uid=114, gid=119, mode=0100600, size=0)
+Clearing orphaned inode 132169 (uid=0, gid=0, mode=0100666, size=0)
+Clearing orphaned inode 131320 (uid=0, gid=0, mode=0100666, size=0)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Free blocks count wrong (577929, counted=574589).
+Fix? yes
+
+Free inodes count wrong (515855, counted=515807).
+Fix? yes
+
+
+/dev/vda1: ***** FILE SYSTEM WAS MODIFIED *****
+/dev/vda1: 139553/655360 files (0.5% non-contiguous), 2046595/2621184 blocks
+Resizing the filesystem on /dev/vda1 to 3931904 (4k) blocks.
+The filesystem on /dev/vda1 is now 3931904 (4k) blocks long.
+
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/vda1: 139553/983040 files (0.5% non-contiguous), 2067796/3931904 blocks
+Thu Nov 30 03:12:55 UTC 2023
